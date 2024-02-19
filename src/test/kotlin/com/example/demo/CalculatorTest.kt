@@ -17,4 +17,18 @@ class CalculatorTest {
         val result = calculator.parse("2 * 2")
         assertEquals(4, result)
     }
+
+    @Test
+    fun testAdd2To2() {
+        val calculator = Calculator()
+        val result = calculator.parse("2 + 2")
+        assertEquals(4, result)
+    }
+
+    @Test
+    fun testMinus2From2() {
+        val calculator = Calculator()
+        val result = calculator.parse("2 - 2")
+        assertEquals(0, result)
+    }
 }

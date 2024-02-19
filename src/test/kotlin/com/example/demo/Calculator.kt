@@ -6,6 +6,8 @@ class Calculator {
         return when (op) {
             "*" -> a.toInt() * b.toInt()
             "/" -> a.toInt() / b.toInt()
+            "+" -> a.toInt() + b.toInt()
+            "-" -> a.toInt() - b.toInt()
             else -> throw IllegalArgumentException("Invalid operator")
         }
     }
