@@ -1,5 +1,6 @@
 package org.example
 
+import org.example.utils.ICalculator
 import utils.Calculator
 
 fun main(args: Array<String>) {
@@ -7,6 +8,6 @@ fun main(args: Array<String>) {
         println("Enter expression:")
         readln()
     } else args.first()
-    val calculator = Calculator()
+    val calculator: ICalculator = Calculator()
     println("$expression = ${calculator.parse(expression)}")
 }

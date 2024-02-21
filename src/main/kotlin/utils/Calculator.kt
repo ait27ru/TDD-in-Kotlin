@@ -1,7 +1,9 @@
 package utils
 
-class Calculator {
-    fun parse(s: String): Int {
+import org.example.utils.ICalculator
+
+class Calculator : ICalculator {
+    override fun parse(s: String): Int {
         val (a, op, b) = s.split(" ")
         return when (op) {
             "*" -> a.toInt() * b.toInt()
