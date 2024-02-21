@@ -16,6 +16,7 @@ repositories {
 
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test:1.9.22")
+    testImplementation("io.mockk:mockk:1.13.9")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.10.2")
 }
 
