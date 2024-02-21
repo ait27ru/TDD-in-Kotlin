@@ -1,6 +1,7 @@
-package com.example.demo
+package utils
 
 import org.junit.jupiter.api.Test
+import utils.Calculator
 import kotlin.test.assertEquals
 
 class CalculatorTest {

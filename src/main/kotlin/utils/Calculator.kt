@@ -1,4 +1,4 @@
-package com.example.demo
+package utils
 
 class Calculator {
     fun parse(s: String): Int {
