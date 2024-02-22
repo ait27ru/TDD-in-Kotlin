@@ -12,6 +12,9 @@ version = "0.1"
 
 repositories {
     mavenCentral()
+    flatDir {
+        dirs("customLibs")
+    }
 }
 
 dependencies {
@@ -41,4 +44,17 @@ tasks.jar {
         from(zipTree(it.absoluteFile))
     }
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+tasks.register("sayHi") {
+    group = "custom"
+    description = "Prints 'Hi' in the console."
+    doLast { println("Hi") }
+}
+
+tasks.register<Copy>("CopyAllCompileDependencies") {
+    group = "other"
+    description = "Copy all dependencies from compile Classpath into 'allLibs' folder."
+    from(configurations.compileClasspath)
+    into("allLibs")
 }
