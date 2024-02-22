@@ -1,5 +1,5 @@
 package org.example.utils
 
 interface ICalculator {
-    fun parse(s: String): Int
+    fun parse(expression: String): Int
 }
