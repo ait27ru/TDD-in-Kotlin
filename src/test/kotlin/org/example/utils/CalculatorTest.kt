@@ -1,4 +1,4 @@
-package utils
+package org.example.utils
 
 import org.junit.jupiter.api.assertThrows
 import kotlin.test.Test
@@ -7,7 +7,7 @@ import kotlin.test.assertEquals
 // Naming convention used in this file: When_TestCondition_Expect_ExpectedOutcome
 // Another common naming convention: FunctionName_TestCondition_ExpectedOutcome
 
-class CalculatorTest {
+internal class CalculatorTest {
 
     private val calculator = Calculator()
 
