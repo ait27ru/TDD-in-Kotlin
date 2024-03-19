@@ -1,6 +1,8 @@
 package org.example.utils
 
-class Calculator : ICalculator {
+import javax.inject.Inject
+
+class Calculator @Inject constructor() : ICalculator {
     override fun parse(expression: String): Int {
         val (a, op, b) = expression.split(" ")
         return when (op) {
