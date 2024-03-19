@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.9.22"
+    kotlin("kapt") version "1.9.23"
     application
 }
 
@@ -18,6 +19,10 @@ repositories {
 }
 
 dependencies {
+    val daggerVersion = "2.51"
+    implementation("com.google.dagger:dagger:$daggerVersion")
+    kapt("com.google.dagger:dagger-compiler:$daggerVersion")
+
     testImplementation("org.jetbrains.kotlin:kotlin-test:1.9.22")
     testImplementation("io.mockk:mockk:1.13.9")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.10.2")
